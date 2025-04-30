@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lenovh2o - Soluciones innovadoras para la purificación y conservación del agua">
+    <title>Renov H2o</title>
+    <link rel="stylesheet" href="/src/css/Main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo RENOV.jpg" type="image/x-icon">
+</head>
+
+<!-- Estilossssss-->
+<style>
+    /**********************************************
+* VARIABLES Y RESET - ULTRA OPTIMIZADO
+**********************************************/
+:root {
+    /* Colores - Tema acuático profesional */
+    --primary-color: #0088cc;
+    --primary-dark: #005580;
+    --primary-light: #66c2ff;
+    --primary-pale: #e6f7ff;
+    --primary-transparent: rgba(0, 136, 204, 0.8);
+    --h1-deldiablo: #ffffff;
+
+    --secondary-color: #00ccff;
+    --accent-color: #ff9900;
+    --accent-light: #ffcc66;
+    
+    --text-dark: #2c3e50;
+    --text-medium: #5d6d7e;
+    --text-light: #f5f5f5;
+    
+    --bg-light: #ffffff;
+    --bg-light-secondary: #f0f8ff;
+    --bg-dark: #0b4970;
+    --bg-darker: #0a1a26;
+    
+    /* Tipografía optimizada */
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-secondary: 'Open Sans', system-ui, sans-serif;
+    
+    /* Espaciado coherente */
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1.25rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
+    
+    /* Sombras mejoradas */
+    --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    --shadow-xl: 0 12px 24px rgba(0,0,0,0.25);
+    --shadow-inset: inset 0 1px 3px rgba(0,0,0,0.08);
+    
+    /* Bordes consistentes */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 20px;
+    --radius-full: 9999px;
+    
+    /* Transiciones optimizadas */
+    --transition-xs: all 0.15s ease;
+    --transition-sm: all 0.25s ease;
+    --transition-md: all 0.35s ease;
+    --transition-lg: all 0.5s ease;
+    --transition-xl: all 0.75s ease;
+    
+    /* Efectos especiales */
+    --blur-sm: blur(4px);
+    --blur-md: blur(8px);
+    --blur-lg: blur(12px);
+}
+
+/* Reset mejorado con :where() para mejor rendimiento */
+:where(*, *::before, *::after) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scroll suave con prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+    }
+}
+
+body {
+    font-family: var(--font-primary);
+    background: linear-gradient(135deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    line-height: 1.6;
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Accesibilidad mejorada */
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background: var(--primary-color);
+    color: white;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.skip-link:focus {
+    transform: translate(-50%, 0);
+}
+
+/**********************************************
+* TIPOGRAFÍA MEJORADA
+**********************************************/
+:where(h1, h2, h3, h4, h5, h6) {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: var(--text-dark);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--h1-deldiablo);
+    letter-spacing: -0.05em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    position: relative;
+    display: inline-block;
+}
+
+h2.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease;
+}
+
+h2.section-title:hover::after {
+    width: 6rem;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+p {
+    margin-bottom: var(--space-md);
+    font-size: 1.1rem;
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-medium);
+    margin-bottom: var(--space-xl);
+    max-width: min(700px, 90%);
+    margin-inline: auto;
+    text-align: center;
+}
+
+/**********************************************
+* COMPONENTES COMUNES OPTIMIZADOS
+**********************************************/
+.container {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+}
+
+/* Botones mejorados */
+:where(.btn, .cta-button) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-md);
+    border: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.primary-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,0.1), transparent);
+}
+
+.primary-btn:hover,
+.primary-btn:focus-visible {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.secondary-btn:hover,
+.secondary-btn:focus-visible {
+    background-color: var(--primary-pale);
+    transform: translateY(-3px);
+}
+
+/* Tarjetas optimizadas */
+:where(.card, .tech-card) {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-md);
+    will-change: transform;
+}
+
+.card:hover,
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/**********************************************
+* HEADER MEJORADO
+**********************************************/
+.animated-header {
+    background: linear-gradient(135deg, #4852ca, #81e7eb);
+    color: white;
+    padding: var(--space-md) 0;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-md);
+    backdrop-filter: var(--blur-sm);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.animated-header.scrolled {
+    padding: var(--space-sm) 0;
+    background: rgba(9, 9, 121, 0.95);
+    backdrop-filter: var(--blur-md);
+    box-shadow: var(--shadow-md);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    transition: var(--transition-md);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo i {
+    transition: var(--transition-md);
+}
+
+
+.logo:hover i {
+    animation: waterDrop 1.5s ease-in-out infinite;
+}
+
+@keyframes waterDrop {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.1); }
+}
+
+#main-nav ul {
+    display: flex;
+    gap: var(--space-md);
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding: var(--space-xs) 0;
+    transition: var(--transition-sm);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: var(--transition-md);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: var(--space-xs);
+    transition: var(--transition-sm);
+}
+
+.mobile-menu-btn:hover {
+    opacity: 0.8;
+}
+
+/**********************************************
+* HERO SECTION - SUPER MEJORADA
+**********************************************/
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    isolation: isolate;
+    background: linear-gradient(
+        135deg, 
+        rgba(2, 0, 36, 0.9) 0%, 
+        rgba(9, 9, 121, 0.8) 35%, 
+        rgba(0, 212, 255, 0.7) 100%
+    );
+}
+
+.particle-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+    padding: var(--space-xl) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+}
+
+.hero-content {
+    width: min(100%, 800px);
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out both;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0 0 var(--space-md) 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    animation: textGlow 3s ease-in-out infinite alternate, fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-xl);
+    max-width: 80ch;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--space-lg);
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Efecto de olas mejorado */
+.water-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.water-wave svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    animation: waveMove 15s linear infinite;
+    will-change: transform;
+}
+
+.wave-fill {
+    fill: var(--bg-light);
+    opacity: 0.8;
+}
+
+.water-wave svg:nth-child(2) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    opacity: 0.5;
+}
+
+.water-wave svg:nth-child(3) {
+    animation-delay: -2s;
+    animation-duration: 25s;
+    opacity: 0.3;
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Scroll indicator mejorado */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: var(--space-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: white;
+    animation: bounce 2s infinite, pulse 2s infinite;
+    cursor: pointer;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: var(--blur-sm);
+    border: none;
+    transition: var(--transition-sm);
+}
+
+.hero-scroll-indicator:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%) scale(1.1);
+}
+
+/**********************************************
+* ANIMACIONES OPTIMIZADAS
+**********************************************/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-15px) translateX(-50%); }
+    60% { transform: translateY(-7px) translateX(-50%); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(100, 150, 255, 0.5); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/**********************************************
+* STATS SECTION MEJORADA
+**********************************************/
+.stats-section {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: var(--space-xl) 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,136,204,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    justify-content: center;
+}
+
+.stat-card {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    backdrop-filter: var(--blur-sm);
+    transition: var(--transition-md);
+    will-change: transform;
+    max-width: 350px;
+    margin: 0 auto;
+    animation: scaleIn 0.6s ease-out both;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    animation: float 3s ease-in-out infinite;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-family: var(--font-secondary);
+}
+
+/**********************************************
+* TECHNOLOGY SECTION MEJORADA
+**********************************************/
+.technology-section {
+    padding: var(--space-xl) 0;
+    background-color: var(--bg-light-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.technology-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, var(--primary-pale) 0%, transparent 70%);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    position: relative;
+    z-index: 1;
+}
+
+.tech-card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-md);
+    will-change: transform;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.tech-card:nth-child(1) { animation-delay: 0.1s; }
+.tech-card:nth-child(2) { animation-delay: 0.2s; }
+.tech-card:nth-child(3) { animation-delay: 0.3s; }
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-lg);
+}
+
+.tech-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: var(--space-md);
+}
+
+.card-content h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--primary-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.card-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.tech-card:hover .card-content h3::after {
+    width: 3rem;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    padding: var(--space-xs) 0;
+    transition: var(--transition-sm);
+}
+
+.card-btn i {
+    transition: var(--transition-sm);
+}
+
+.card-btn:hover {
+    color: var(--primary-dark);
+}
+
+.card-btn:hover i {
+    transform: translateX(3px);
+}
+
+.card-btn[aria-expanded="true"] i {
+    transform: rotate(90deg);
+}
+
+.card-expandable {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--primary-pale);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.card-expandable.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.tech-specs {
+    list-style: none;
+    margin-top: var(--space-sm);
+}
+
+.tech-specs li {
+    margin-bottom: var(--space-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: transform 0.3s ease;
+}
+
+.tech-specs li:hover {
+    transform: translateX(5px);
+}
+
+.tech-specs i {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+/**********************************************
+* PROJECTS SECTION MEJORADA
+**********************************************/
+.projects-section {
+    padding: var(--space-xl) 0;
+    background-color: white;
+    position: relative;
+}
+
+.projects-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,136,204,0.05) 0%, transparent 100%);
+    z-index: 0;
+}
+
+.projects-filter {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: var(--space-xs) var(--space-md);
+    background: none;
+    border: 2px solid var(--primary-pale);
+    border-radius: var(--radius-full);
+    color: var(--text-medium);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-md);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.project-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-lg);
+    will-change: transform;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-md);
+    color: white;
+    opacity: 0;
+    transition: var(--transition-md);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-xs);
+    transform: translateY(20px);
+    transition: var(--transition-md);
+    transition-delay: 0.1s;
+}
+
+.project-location {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9rem;
+    transform: translateY(20px);
+    transition: var(--transition-md);
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+
+.project-card:hover .project-title,
+.project-card:hover .project-location {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.load-more-btn {
+    display: block;
+    margin: var(--space-xl) auto 0;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--primary-pale);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-md);
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.load-more-btn:hover {
+    background: var(--primary-light);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/**********************************************
+* IMPACT SECTION MEJORADA
+**********************************************/
+.impact-section {
+    padding: var(--space-xl) 0;
+    background-color: var(--bg-light-secondary);
+    position: relative;
+}
+
+.impact-tabs {
+    margin-top: var(--space-xl);
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: var(--space-sm) var(--space-lg);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    color: var(--text-medium);
+    cursor: pointer;
+    transition: var(--transition-sm);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: var(--transition-md);
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    color: var(--primary-dark);
+}
+
+.tab-btn.active::after,
+.tab-btn:hover::after {
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.impact-visualization {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.impact-chart {
+    width: 100%;
+    height: 400px;
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-chart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,136,204,0.05) 0%, transparent 100%);
+    z-index: 0;
+}
+
+.chart-image {
+
+width: 900px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.impact-chart:hover .chart-image {
+    transform: scale(1.05);
+}
+
+#healthChart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.impact-text {
+    position: relative;
+    z-index: 1;
+}
+
+.impact-text h3 {
+    color: var(--primary-dark);
+    margin-bottom: var(--space-md);
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+.impact-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 3rem;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.impact-text p {
+    margin-bottom: var(--space-md);
+    line-height: 1.8;
+}
+
+.impact-list {
+    list-style: none;
+    margin-top: var(--space-md);
+}
+
+.impact-list li {
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.impact-list li:hover {
+    transform: translateX(5px);
+}
+
+.impact-list i {
+    color: var(--primary-color);
+    min-width: 24px;
+    margin-top: 2px;
+}
+
+/**********************************************
+* NEWSLETTER SECTION MEJORADA
+**********************************************/
+.newsletter-section {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.newsletter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-content h2 {
+    color: white;
+    margin-bottom: var(--space-md);
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.newsletter-content p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.input-group {
+    display: flex;
+    position: relative;
+}
+
+.input-group input {
+    flex: 1;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--radius-full) 0 0 var(--radius-full);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: var(--transition-sm);
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.3);
+}
+
+.submit-btn {
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.submit-btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.form-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: rgba(255,255,255,0.7);
+}
+
+.form-feedback {
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.form-feedback.success {
+    background: rgba(0, 200, 0, 0.2);
+    color: #a5ffa5;
+}
+
+.form-feedback.error {
+    background: rgba(200, 0, 0, 0.2);
+    color: #ff9999;
+}
+
+/**********************************************
+* FOOTER MEJORADO
+**********************************************/
+.main-footer {
+    background-color: var(--bg-darker);
+    color: white;
+    padding: var(--space-xl) 0 0;
+    position: relative;
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: var(--space-lg);
+    font-size: 1.3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.footer-col:hover h4::after {
+    width: 3rem;
+}
+
+.footer-about p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: var(--transition-md);
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: var(--shadow-sm);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--space-sm);
+    transition: var(--transition-sm);
+}
+
+.footer-links li:hover {
+    transform: translateX(5px);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition-sm);
+    display: block;
+    padding: var(--space-xxs) 0;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact ul {
+    list-style: none;
+}
+
+.footer-contact li {
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    transition: var(--transition-sm);
+}
+
+.footer-contact li:hover {
+    transform: translateX(5px);
+}
+
+.footer-contact i {
+    color: var(--secondary-color);
+    margin-top: 3px;
+    transition: var(--transition-sm);
+}
+
+.footer-contact li:hover i {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: var(--space-md) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition-sm);
+}
+
+.footer-legal a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/**********************************************
+* COMPONENTES ADICIONALES MEJORADOS
+**********************************************/
+.back-to-top {
+    position: fixed;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.preloader-spinner {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.water-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: waterFloat 2s ease-in-out infinite;
+}
+
+.water-animation i {
+    font-size: 3rem;
+    color: white;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+}
+
+
+/*********************************************
+* INTERACTIVE DEMO                            
+**********************************************/
+.interactive-demo {
+    padding: var(--space-xl) 0;
+    background-color: white;
+    position: relative;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.water-purification-demo {
+    background-color: var(--bg-light-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.water-purification-demo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,136,204,0.05) 0%, transparent 100%);
+    z-index: 0;
+}
+
+.stage-container {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--radius-sm);
+    z-index: 1;
+}
+
+.demo-stage {
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: var(--space-md);
+}
+
+.demo-stage.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.stage-image {
+    max-height: 250px;
+    margin-bottom: var(--space-md);
+    object-fit: contain;
+    transition: var(--transition-md);
+}
+
+.stage-title {
+    color: var(--primary-dark);
+    margin-bottom: var(--space-sm);
+    font-size: 1.5rem;
+}
+
+.stage-process {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-md);
+    padding: 0 var(--space-md);
+    z-index: 1;
+    position: relative;
+}
+
+.control-btn {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition-sm);
+    font-weight: 600;
+    min-width: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+}
+
+.control-btn:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xs);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.stage-indicator {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+}
+
+.stage-description {
+    background: var(--primary-pale);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.stage-description h3 {
+    color: var(--primary-dark);
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+}
+
+.stage-description p {
+    line-height: 1.8;
+}
+
+
+
+
+/**********************************************
+* RESPONSIVE DESIGN MEJORADO
+**********************************************/
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 var(--space-lg);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .impact-visualization {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .newsletter-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .newsletter-content {
+        margin-bottom: var(--space-xl);
+    }
+    
+    .newsletter-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+    }
+    
+    #main-nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-dark);
+        padding: var(--space-md);
+        display: none;
+        box-shadow: var(--shadow-md);
+        z-index: 999;
+    }
+    
+    #main-nav.active {
+        display: block;
+        animation: fadeInDown 0.3s ease-out;
+    }
+    
+    #main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: var(--space-sm) 0;
+        width: 100%;
+        gap: var(--space-md);
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-group input {
+        border-radius: var(--radius-full);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .submit-btn {
+        border-radius: var(--radius-full);
+        margin-top: var(--space-sm);
+        width: 100%;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        padding: var(--space-md);
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .technology-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+    
+    .impact-chart {
+        height: 300px;
+    }
+}
+
+@keyframes fadeInDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos de agua adicionales */
+.water-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.water-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 136, 204, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Animación para elementos de lista */
+.list-item-animation {
+    transition: transform 0.3s ease;
+}
+
+.list-item-animation:hover {
+    transform: translateX(5px);
+}
+
+/* Efecto de tarjeta flotante */
+.floating-card {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Efecto de onda en botones */
+.wave-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.wave-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+</style>
+<body>
+
+ <div class="preloader">
+    <div class="preloader-spinner">
+        <div class="water-animation">
+            <i class="fas fa-water"></i>
+         
+        </div>
+
+        <div class="water-wave"></div>
+        <div class="water-wave"></div>
+    </div>
+</div> 
+
+
+
+    <header class="animated-header">
+        <div class="container header-container">
+            <div class="logo">
+             <i class="fas fa-water"></i>
+                <span>RenovH2O</span>
+            </div>
+            <nav id="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#tecnologia" class="nav-link">Puntos clave</a></li>
+                    <li><a href="#proyectos" class="nav-link">Origen</a></li>
+                    <li><a href="#impacto" class="nav-link">Objetivos</a></li>
+                   <!--   <li><a href="#interactive-demo" class="nav-link">Blablabla</a></li>-->
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+
+            <section id="inicio" class="hero-section" aria-labelledby="hero-heading">
+                <!-- Canvas para las partículas -->
+                <div class="particle-background" id="particles-js"></div>
+                
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <h1 id="hero-heading" class="animated-title">Para un futuro mas limpio y responsable!</h1>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <a href="#tecnologia"><div class="hero-scroll-indicator" aria-hidden="true">
+                        <i class="fas fa-chevron-down"></i>
+                    </div></a>
+
+
+
+
+                </div>
+            </section>
+    
+        <!-- Stats Section -->
+        <section class="stats-section" aria-labelledby="stats-heading">
+            <div class="container stats-grid">
+
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="45">18</span>
+                        <span class="stat-label">Personas ayudando</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="tecnologia" class="technology-section" aria-labelledby="technology-heading">
+            <div class="container">
+                <h2 id="technology-heading" class="section-title">Nuestra guía para el éxito</h2>
+                <p class="section-subtitle">La esencia de nuestro Proyecto.</p>
+                
+                <div class="technology-grid">
+                    <article class="tech-card">
+                        <div class="card-image">
+                            <img src="Vision.png" alt="Vssasasa" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Visión</h3>
+                            <p>Ser líderes en el tratamiento y reutilización
+                                de aguas residuales, contribuyendo
+                                activamente a la sostenibilidad ambiental, la
+                                innovación tecnológica y la mejora de la
+                                calidad de vida de las comunidades</p>
+
+
+                        </div>
+                    </article>
+                    
+                    <article class="tech-card">
+                        <div class="card-image">
+                            <img src="Mision.png" alt="Purificación solar" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Misión</h3>
+                            <p>La inclusión de plantas de
+                                tratamiento de aguas residuales
+                                tanto en las comunidades educativas
+                                y en la población para la reducción
+                                de la contaminación de las aguas
+                                residuales</p>
+
+
+                        </div>
+                    </article>
+                    
+                    <article class="tech-card">
+                        <div class="card-image">
+                            <img src="valoress.png" alt="Monitoreo IoT" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Valores</h3>
+                            <p>1. Responsabilidad ambiental</p>
+                            <p>2. Innovación tecnologica </p>
+                            <p>3. Colaboración</p>
+                            <p>4. Compromiso</p>
+                            <p>5. Sostenibilidad</p>
+                            <p>6. Seguridad</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="projects-section" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading" class="section-title">Origen y ¿Quienes somos?</h2>
+                <h4 class="section-subtitle">Nombre de origen de nuestro proyecto y historia.</h4>
+                <p>Porque, el nombre "RenovH20" combina
+                    "renovar" y "H2O", donde H2O es la fórmula
+                    química del agua. Con esta iniciativa se busca
+                    concienciar sobre la importancia del agua,
+                    fomentar prácticas de conservación y
+                    sostenibilidad. </p>
+
+                    <br>
+                    <br>
+
+                    <h3>¿Quienes somos?</h3>
+
+                    <br>
+
+                    <p>Somos una empresa que se
+                        enfoca en la renovación y mejora
+                        de las aguas residuales para una
+                        mejor calidad de vida y un mejor
+                        uso del agua de manera
+                        sostenible y eficiente.</p>
+
+             
+                <div class="projects-grid">
+                    <!-- Los proyectos se cargarán dinámicamente con JavaScript -->
+                </div>
+                
+  
+            </div>
+        </section>
+
+        <!-- Impact Visualization -->
+        <section id="impacto" class="impact-section" aria-labelledby="impact-heading">
+            <div class="container">
+                <h2 id="impact-heading" class="section-title">Objetivos</h2>
+                <p class="section-subtitle">Un camino al éxito</p>
+                
+                <div class="impact-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="health">Metas</button>
+                        <button class="tab-btn" data-tab="education">Objetivo General</button>
+                        <button class="tab-btn" data-tab="economic">Objetivo Específico</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="health">
+                        <div class="impact-visualization">
+                            <div class="impact-chart">
+                                <img src="METAS.jpeg" class="chart-image" alt="Imagen de Metas">
+                            </div>
+                            <div class="impact-text">
+                                <h3>Metas</h3>
+                                <p>Proponer la inclusión de una planta de tratamiento de aguas residuales en el centro educativo que garantice el manejo sostenible del recurso hídrico, promoviendo la conservación ambiental, el uso eficiente del agua y la concienciación de la comunidad educativa sobre la importancia de tratar y reutilizar las aguas residuales de manera responsable.</p>
+                                
+                                <ul class="impact-list">
+                                    <li><i class="fas fa-check-circle"></i> Protección del medio ambiente.</li>
+                                    <li><i class="fas fa-check-circle"></i> Eliminar las aguas residuales del centro educativo.</li>
+                                    <li><i class="fas fa-check-circle"></i> Seguridad y salud pública.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="education">
+                        <div class="impact-visualization">
+                            <div class="impact-chart">
+                                <img src="ObjetivooooGeneral.jpg" class="chart-image" alt="Objetivo General">
+                            </div>
+                                                        <div class="impact-text">
+                                <h3>Objetivo General</h3>
+                                <p>Proponer la inclusión de una planta de tratamiento de aguas residuales en el centro educativo para garantizar el manejo sostenible del recurso hídrico.</p>
+                                
+ 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="economic">
+                        <div class="impact-visualization">
+                            <div class="impact-chart">
+                                <img src="ObjetivoGeneral.jpg" class="chart-image" alt="Objetivo Específico">
+                            </div>
+                            <div class="impact-text">
+                                <h3>Objetivo Específico</h3>
+             
+                                
+                                <ul class="impact-list">
+                                    <li><i class="fas fa-check-circle"></i>Promover la conservación ambiental a través del tratamiento adecuado de aguas residuales</li>
+                                    <li><i class="fas fa-check-circle"></i>Fomentar el uso eficiente del agua en el centro educativo.</li>
+                                    <li><i class="fas fa-check-circle"></i>Concienciar a la comunidad educativa sobre la importancia de tratar y reutilizar las aguas residuales de manera responsable.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive Demo 
+        <section class="interactive-demo" id="interactive-demo" aria-labelledby="demo-heading">
+            <div class="container">
+                <h2 id="demo-heading" class="section-title">Simulación Interactiva</h2>
+                <p class="section-subtitle">Explora cómo funciona nuestra tecnología de purificación</p>
+                
+                <div class="demo-container">
+                    <div class="water-purification-demo">
+                        <div class="stage-container">
+                         <!-- Etapas generadas dinámicamente por JavaScript (src/js/MAin.Js) 
+                            <div class="demo-stage active" data-stage="1">
+                                <img src="https://via.placeholder.com/500x300?text=Captación+de+agua" alt="Captación de agua" class="stage-image">
+                                <h3 class="stage-title">blablal</h3>
+                                <p class="stage-process">blablal</p>
+                            </div>
+                            <div class="demo-stage" data-stage="2">
+                                <img src="https://via.placeholder.com/500x300?text=Pretratamiento" alt="Pretratamiento" class="stage-image">
+                                <h3 class="stage-title">blablal</h3>
+                                <p class="stage-process">blablal</p>
+                            </div>
+                            <div class="demo-stage" data-stage="3">
+                                <img src="https://via.placeholder.com/500x300?text=Filtración" alt="Filtración" class="stage-image">
+                                <h3 class="stage-title">blablal</h3>
+                                <p class="stage-process">blablal</p>
+                            </div>
+                            <div class="demo-stage" data-stage="4">
+                                <img src="https://via.placeholder.com/500x300?text=Desinfección" alt="Desinfección" class="stage-image">
+                                <h3 class="stage-title">blablal</h3>
+                                <p class="stage-process">blablal</p>
+                            </div>
+                            <div class="demo-stage" data-stage="5">
+                                <img src="https://via.placeholder.com/500x300?text=Almacenamiento" alt="Almacenamiento" class="stage-image">
+                                <h3 class="stage-title">blablal</h3>
+                                <p class="stage-process">blablal</p>
+                            </div>
+                            <div class="demo-stage" data-stage="6 ">
+                                <img src="https://via.placeholder.com/500x300?text=Almacenamiento" alt="otro paso" class="stage-image">
+                                <h3 class="stage-title">blablal</h3>
+                                <p class="stage-process">blablal</p>
+                            </div>
+                        </div>
+                        <div class="controls-container">
+                            <button class="control-btn" id="prevStage" disabled>Anterior</button>
+                            <div class="stage-indicator">
+                                <span class="current-stage">1</span>/<span class="total-stages">5</span>
+                            </div>
+                            <button class="control-btn" id="nextStage">Siguiente</button>
+                        </div>
+                    </div>
+                     <!-- La mieldita azul que esta alado 
+                    <div class="stage-description">
+                        <h3 id="description-title">Blablabla</h3>
+                        <p id="description-text">Blablabla</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Newsletter Section -->
+
+    </main>
+
+    <footer class="main-footer" aria-labelledby="footer-heading">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <h3 id="footer-heading">RenovH2O</h3>
+                <p>Para un futuro mas limpio y responsable</p>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <div class="footer-col footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#tecnologia">Filosofia</a></li>
+                    <li><a href="#proyectos">Origen</a></li>
+                    <li><a href="#impacto">Objetivos</a></li>
+
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i>Centro educativo Emma Balaguer || Calle 14 SDN</li>
+                    <li><i class="fas fa-phone"></i>+1 809 590 5808</li>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/renovh2o?igsh=MTdmN3B6ZXMyaXBsdg%3D%3D&utm_source=qr" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Renovh2o. Todos los derechos reservados.</p>
+                <p>Pagina creada y desarrollada por Tolentino<!-- Hizo todo--> Junto a Jhoan Reyes y Daniel Emil</p>
+                <p></p>
+                <div class="footer-legal">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+<!-- Scriptst-->
+    <script src="/src/js/Main.js" type="module"></script>
+    <script src="/src/js/Particles.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+// Particles
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuración de particles.js
+    const config = {
+        particles: {
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: "#ffffff"
+            },
+            shape: {
+                type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 3,
+                random: true
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: true,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "grab"
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 140,
+                    line_linked: {
+                        opacity: 1
+                    }
+                },
+                push: {
+                    particles_nb: 4
+                }
+            }
+        },
+        retina_detect: true
+    };
+
+    // Inicialización
+    particlesJS('particles-js', config);
+});
+
+    </script>
+<!-- Main-->
+    <script>
+
+        // Main.js
+// este archivo contiene la logica blablabla
+
+// Impact Visualization funcion
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remover clase active de todos los botones y contenidos
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+                content.setAttribute('hidden', '');
+            });
+            
+            // Agregar clase active al botón clickeado
+            this.classList.add('active');
+            
+            // Mostrar el contenido correspondiente
+            const tabId = this.getAttribute('data-tab');
+            const tabContent = document.getElementById(tabId);
+            tabContent.classList.add('active');
+            tabContent.removeAttribute('hidden');
+        });
+    });
+});
+
+
+// Demo intenactive}
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stages = document.querySelectorAll('.demo-stage');
+    const prevBtn = document.getElementById('prevStage');
+    const nextBtn = document.getElementById('nextStage');
+    const currentStageEl = document.querySelector('.current-stage');
+    const totalStagesEl = document.querySelector('.total-stages');
+    const descriptionTitle = document.getElementById('description-title');
+    const descriptionText = document.getElementById('description-text');
+    
+    let currentStage = 1;
+    const totalStages = stages.length;
+    
+    // Configurar el total de etapas
+    totalStagesEl.textContent = totalStages;
+    
+    // Descripciones para cada etapa
+    const stageDescriptions = [
+        {
+            title: "1. Etapa 1",
+            text: "Blablabla"
+        },
+        {
+            title: "Blablabla",
+            text: "Blablabla"
+        },
+        {
+            title: "Blablabla",
+            text: "Blablabla"
+        },
+        {
+            title: "Blablabla",
+            text: "Blablabla"
+        },
+        {
+            title: "Blablabla",
+            text: "Blablabla"
+        },
+        {
+            title: "Blablabla",
+            text: "Blablabla"
+        }
+    ];
+    
+    // Actualizar la descripción según la etapa actual
+    function updateDescription() {
+        descriptionTitle.textContent = stageDescriptions[currentStage - 1].title;
+        descriptionText.textContent = stageDescriptions[currentStage - 1].text;
+    }
+    
+    // Actualizar la visualización de las etapas
+    function updateStages() {
+        stages.forEach(stage => {
+            stage.classList.remove('active');
+            if (parseInt(stage.dataset.stage) === currentStage) {
+                stage.classList.add('active');
+            }
+        });
+        
+        currentStageEl.textContent = currentStage;
+        updateDescription();
+        
+        // Habilitar/deshabilitar botones según la etapa
+        prevBtn.disabled = currentStage === 1;
+        nextBtn.disabled = currentStage === totalStages;
+    }
+    
+    // Event listeners para los botones
+    prevBtn.addEventListener('click', function() {
+        if (currentStage > 1) {
+            currentStage--;
+            updateStages();
+        }
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        if (currentStage < totalStages) {
+            currentStage++;
+            updateStages();
+        }
+    });
+    
+    // Inicializar
+    updateStages();
+});
+
+
+
+
+// Preloader 
+
+   // Simular carga de página (en un caso real, usarías window.onload o document.ready)
+        // Esta es una simulación con setTimeout para demostración
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ocultar el preloader cuando la página esté completamente cargada
+            setTimeout(function() {
+                const preloader = document.querySelector('.preloader');
+                preloader.classList.add('fade-out');
+                
+                // Eliminar el preloader del DOM después de la animación
+                preloader.addEventListener('transitionend', function() {
+                    preloader.style.display = 'none';
+                });
+            }, 3000); // Cambia este valor por window.onload en producción
+        });
+        
+        // Para implementación real, reemplaza el setTimeout con:
+        // window.onload = function() {
+        //     const preloader = document.querySelector('.preloader');
+        //     preloader.classList.add('fade-out');
+        //     
+        //     preloader.addEventListener('transitionend', function() {
+        //         preloader.style.display = 'none';
+        //     });
+        // };
+
+
+        // Particulas
+
+        // Inicialización de partículas.js (https://github.com/VincentGarreau/particles.js)
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 0.5
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    }
+});
+    </script>
+
+
+</body>
+</html>
+
+<!-- Esta pagina fue desarollada unica y exclusivamente por jhogensy tolentino. Los otros dos son unos lambones que se metieron a la mala
+ 
+Att: Tolentino-->
